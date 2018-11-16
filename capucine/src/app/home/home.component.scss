@@ -1,0 +1,17 @@
+.left-side {
+
+  &-container {
+  width: 50%;
+  background: url('/assets/home.jpg') no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center
+  }
+
+  &-text {
+    padding: 5%;
+  }
+}
