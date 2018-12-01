@@ -26,9 +26,10 @@
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.8.0",
+    "@angular-devkit/build-angular": "^0.8.8",
     "@angular/cli": "~6.2.3",
     "@angular/compiler-cli": "^6.1.0",
+    "@angular/flex-layout": "^6.0.0-beta.18",
     "@angular/language-service": "^6.1.0",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
@@ -44,7 +45,6 @@
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
-    "typescript": "~2.9.2",
-    "@angular/flex-layout": "^6.0.0-beta.18"
+    "typescript": "~2.9.2"
   }
 }
