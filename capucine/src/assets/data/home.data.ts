@@ -1,6 +1,6 @@
-import { homeData } from './home.model';
+import { HomeData } from './home.model';
 
-export const homeInfos: homeData[] = [
+export const homeInfos: HomeData[] = [
   {
   key: 'Poste :',
   value: ''
