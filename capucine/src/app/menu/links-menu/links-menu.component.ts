@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { menuInfos } from '../../../assets/data/home.data';
 
 @Component({
   selector: 'app-links-menu',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./links-menu.component.scss']
 })
 export class LinksMenuComponent implements OnInit {
+  menu = menuInfos;
 
   constructor() { }
 
