@@ -7,6 +7,10 @@ import { MenuComponent } from './menu/menu.component';
 import { HeaderMenuComponent } from './menu/header-menu/header-menu.component';
 import { LinksMenuComponent } from './menu/links-menu/links-menu.component';
 import { LinksNetworksMenuComponent } from './menu/links-networks-menu/links-networks-menu.component';
+import { AboutComponent } from './about/about.component';
+import { ResumeComponent } from './resume/resume.component';
+import { ServicesComponent } from './services/services.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +19,11 @@ import { LinksNetworksMenuComponent } from './menu/links-networks-menu/links-net
     MenuComponent,
     HeaderMenuComponent,
     LinksMenuComponent,
-    LinksNetworksMenuComponent
+    LinksNetworksMenuComponent,
+    AboutComponent,
+    ResumeComponent,
+    ServicesComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule
