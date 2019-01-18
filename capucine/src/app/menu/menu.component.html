@@ -1,3 +1,21 @@
-<app-header-menu></app-header-menu>
-<app-links-networks-menu></app-links-networks-menu>
-<app-links-menu></app-links-menu>
+<div class="menu-container">
+  <div class="menu-header">
+  <div class="menu-header-img"></div>
+  <div class="menu-header-title">Capucine Leclerc</div>
+</div>
+
+  <div class="networks">
+    <a href="#" class="gh" title="Join us on Github"><i class="fa fa-github" aria-hidden="true"></i></a>
+    <a href="#" class="fb" title="Join us on Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+    <a href="#" class="tw" title="Join us on Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+    <a href="#" class="g-plus" title="Join us on Google+"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+    <a href="#" class="insta" title="Join us on Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+    <a href="#" class="in" title="Join us on Linked In"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+  </div>
+
+<ul class="menu-main">
+  <li class="menu-main-link" *ngFor="let elem of menu"><a href="#">{{elem.value | uppercase}}</a></li>
+</ul>
+
+
+</div>
