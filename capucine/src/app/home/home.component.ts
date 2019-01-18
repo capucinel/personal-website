@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { homeData } from '../../assets/data/home.model';
 import { homeInfos } from '../../assets/data/home.data';
 
 
