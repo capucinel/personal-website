@@ -1,6 +1,6 @@
-import { homeData } from './home.model';
+import { HomeData, HomeDataMenu } from './home.model';
 
-export const homeInfos: homeData[] = [
+export const homeInfos: HomeData[] = [
   {
   key: 'Poste :',
   value: ''
@@ -20,4 +20,24 @@ export const homeInfos: homeData[] = [
 {
   key: 'Citation préférée :',
   value: ''
+}];
+
+export const menuInfos: HomeDataMenu[] = [
+{
+  value: 'home'
+},
+{
+  value: 'about me'
+},
+{
+  value: 'my resume'
+},
+{
+  value: 'services'
+},
+{
+  value: 'portfolio'
+},
+{
+  value: 'contact'
 }];

@@ -1,0 +1,13 @@
+.header-menu {
+  &-title {
+    font-family: inherit;
+  }
+  &-img {
+    background: url('/assets/photo/capucine.JPG');
+    background-size: cover;
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    }
+  }
+
