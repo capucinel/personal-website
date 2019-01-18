@@ -1,4 +1,4 @@
-export interface HomeData {
+export interface homeData {
   key: string;
   value: string;
 }
