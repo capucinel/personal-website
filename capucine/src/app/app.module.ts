@@ -5,16 +5,19 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { TypingAnimationDirective } from 'angular-typing-animation';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    MenuComponent
+    MenuComponent,
+    TypingAnimationDirective
   ],
   imports: [
     BrowserModule,
     FlexLayoutModule
+
 
   ],
   providers: [],

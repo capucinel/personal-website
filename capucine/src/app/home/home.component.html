@@ -1,5 +1,13 @@
 <div class="left-side-container">
-  <h1>Hello</h1>
+  <h1>Hello, I am</h1>
+  <h1
+  typingAnimation
+  [typeSpeed]="90"
+  [startDelay]="200"
+  [condition]= false
+  (complete)="onComplete()"
+  class="typing">
+  Capucine</h1>
   <p class="left-side-text" *ngFor="let d of data">{{d.key}} {{d.value}}</p>
 
   <button class="left-side-contact">Contact me</button>
