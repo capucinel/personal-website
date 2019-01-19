@@ -1,14 +1,14 @@
 .left-side {
 
   &-container {
-  width: 50%;
   background: url('/assets/photo/home.jpg') no-repeat;
   background-size: cover;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center
+  align-items: center;
+  height: 100%;
   }
 
   &-text {
