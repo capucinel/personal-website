@@ -2,12 +2,18 @@
   <h1>Hello, I am</h1>
   <h1
   typingAnimation
-  [typeSpeed]="90"
+  [typeSpeed]="200"
   [startDelay]="200"
-  [condition]= false
-  (complete)="onComplete()"
+  [condition]= true
   class="typing">
   Capucine</h1>
+  <h1
+  typingAnimation
+  [typeSpeed]="90"
+  [startDelay]="1500"
+  [condition]= true
+  class="typing">
+  and I love chicken</h1>
   <p class="left-side-text" *ngFor="let d of data">{{d.key}} {{d.value}}</p>
 
   <button class="left-side-contact">Contact me</button>
