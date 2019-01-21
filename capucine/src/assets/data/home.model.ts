@@ -5,4 +5,5 @@ export interface HomeData {
 
 export interface HomeDataMenu {
   value: string;
+  link: string;
 }
