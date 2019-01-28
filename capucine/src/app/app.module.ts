@@ -3,23 +3,45 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { MenuComponent } from './menu/menu.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { TypingAnimationDirective } from 'angular-typing-animation';
+import { RouterModule, Routes } from '@angular/router';
+import {MenuComponent} from './menu/menu.component';
+import {ContactComponent} from './contact/contact.component';
+import {ResumeComponent} from './resume/resume.component';
+import {AboutComponent} from './about/about.component';
+
+const appRoutes: Routes = [
+
+  { path: '',
+    component: HomeComponent
+  },
+
+  { path: 'about',
+    component: AboutComponent
+  },
+
+];
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     MenuComponent,
-    TypingAnimationDirective
+    ContactComponent,
+    ResumeComponent,
+    AboutComponent,
+    TypingAnimationDirective,
   ],
   imports: [
     BrowserModule,
-    FlexLayoutModule
-
-
+    FlexLayoutModule,
+    RouterModule.forRoot(
+        appRoutes,
+        { enableTracing: true } // <-- debugging purposes only
+      )
   ],
+  exports: [RouterModule],
   providers: [],
   bootstrap: [AppComponent]
 })
