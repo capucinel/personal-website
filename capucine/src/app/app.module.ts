@@ -10,17 +10,22 @@ import {MenuComponent} from './menu/menu.component';
 import {ContactComponent} from './contact/contact.component';
 import {ResumeComponent} from './resume/resume.component';
 import {AboutComponent} from './about/about.component';
+import { ServicesComponent } from './services/services.component';
 
 const appRoutes: Routes = [
 
   { path: '',
     component: HomeComponent
   },
-
   { path: 'about',
     component: AboutComponent
   },
-
+  { path: 'resume',
+  component: ResumeComponent
+  },
+  { path: 'services',
+  component: ServicesComponent
+  }
 ];
 
 @NgModule({
@@ -31,6 +36,7 @@ const appRoutes: Routes = [
     ContactComponent,
     ResumeComponent,
     AboutComponent,
+    ServicesComponent,
     TypingAnimationDirective,
   ],
   imports: [

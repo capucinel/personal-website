@@ -33,12 +33,12 @@ export const menuInfos: HomeDataMenu[] = [
 },
 {
   value: 'my resume',
-  link: 'about'
+  link: 'resume'
 
 },
 {
   value: 'services',
-  link: 'about'
+  link: 'services'
 
 },
 {
