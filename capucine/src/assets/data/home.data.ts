@@ -24,20 +24,30 @@ export const homeInfos: HomeData[] = [
 
 export const menuInfos: HomeDataMenu[] = [
 {
-  value: 'home'
+  value: 'home',
+  link: '/'
 },
 {
-  value: 'about me'
+  value: 'about me',
+  link: 'about'
 },
 {
-  value: 'my resume'
+  value: 'my resume',
+  link: 'about'
+
 },
 {
-  value: 'services'
+  value: 'services',
+  link: 'about'
+
 },
 {
-  value: 'portfolio'
+  value: 'portfolio',
+  link: 'about'
+
 },
 {
-  value: 'contact'
+  value: 'contact',
+  link: 'about'
+
 }];
