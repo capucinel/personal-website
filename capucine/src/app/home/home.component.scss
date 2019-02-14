@@ -4,15 +4,17 @@
     background: url(/assets/photo/home.jpg) no-repeat;
     background-size: cover;
     height: 100%;
-    position: fixed;
-    top: 0;
-    right: 0;
+    // position: fixed;
+    // top: 0;
+    // right: 0;
     text-align: center;
-    width: 50%;
+    width: 100%;
+
+
   }
 
   &-text {
-    padding: 5%;
+    padding: 2%;
   }
 }
 

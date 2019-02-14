@@ -25,7 +25,7 @@ export const homeInfos: HomeData[] = [
 export const menuInfos: HomeDataMenu[] = [
 {
   value: 'home',
-  link: '/'
+  link: '/',
 },
 {
   value: 'about me',

@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+
 import {
   transition,
   trigger,
@@ -24,7 +26,7 @@ import {
         ),
         query(
           ':leave',
-           [style({ opacity: 1 }), animate('0.3s', style({ opacity: 0 }))],
+          [style({ opacity: 1 }), animate('0.3s', style({ opacity: 0 }))],
           { optional: true }
         ),
         query(
@@ -36,6 +38,12 @@ import {
     ])
   ]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'Capucine';
+
+  constructor() { }
+
+
+  ngOnInit() {
+  }
 }

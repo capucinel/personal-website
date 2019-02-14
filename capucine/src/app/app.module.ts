@@ -15,16 +15,25 @@ import { ServicesComponent } from './services/services.component';
 const appRoutes: Routes = [
 
   { path: '',
-    component: HomeComponent
+    component: HomeComponent,
   },
   { path: 'about',
-    component: AboutComponent
+    component: AboutComponent,
+    data: {
+      title: 'about'
+    }
   },
   { path: 'resume',
-  component: ResumeComponent
+  component: ResumeComponent,
+    data: {
+      title: 'resume'
+    }
   },
   { path: 'services',
-  component: ServicesComponent
+  component: ServicesComponent,
+    data: {
+      title: 'services'
+    }
   }
 ];
 
@@ -44,7 +53,7 @@ const appRoutes: Routes = [
     FlexLayoutModule,
     RouterModule.forRoot(
         appRoutes,
-        { enableTracing: true } // <-- debugging purposes only
+        { enableTracing: false } // <-- debugging purposes only
       ),
       BrowserAnimationsModule
   ],

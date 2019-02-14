@@ -1,13 +1,11 @@
-<div class="left-side-container">
-  <h1>Hello, I am</h1>
-  <h1
-  typingAnimation
-  [typeSpeed]="200"
-  [startDelay]="200"
-  [condition]= true
-  class="typing">
-  Capucine</h1>
-  <p class="left-side-text" *ngFor="let d of data">{{d.key}} {{d.value}}</p>
 
-  <button class="left-side-contact">Contact me</button>
-</div>
+
+  <div class="left-side-container">
+
+    <h1>Hello, I am</h1>
+    <h1 typingAnimation [typeSpeed]="200" [startDelay]="200" [condition]=true class="typing">
+      Capucine</h1>
+    <p class="left-side-text" *ngFor="let d of data">{{d.key}} {{d.value}}</p>
+
+    <button class="left-side-contact">Contact me</button>
+  </div>
