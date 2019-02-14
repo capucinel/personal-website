@@ -1,26 +1,24 @@
 import { HomeData, HomeDataMenu } from './home.model';
 
 export const homeInfos: HomeData[] = [
-  {
-  key: 'Poste :',
-  value: ''
+{
+  key: 'Disponibilité :',
+  value: 'Immédiate'
 },
+
 {
   key: 'Age :',
-  value: ''
+  value: '34 ans'
+},
+{
+  key: 'Villes :',
+  value: 'Nantes & Paris'
 },
 {
   key: 'Email :',
-  value: ''
-},
-{
-  key: 'Téléphone :',
-  value: ''
-},
-{
-  key: 'Citation préférée :',
-  value: ''
-}];
+  value: 'capucine.leclerc@gmail.com'
+}
+];
 
 export const menuInfos: HomeDataMenu[] = [
 {

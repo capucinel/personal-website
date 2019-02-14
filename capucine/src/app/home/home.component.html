@@ -1,11 +1,16 @@
+<div class="home-container">
+  <div class="home-content">
+    <div class="home-content-title">
+    <h1 typingAnimation [typeSpeed]="100" [startDelay]="200" [condition]=true [hideCursorOnComplete]=true class="typing">
+      développeuse intégratrice web</h1>
 
+      </div>
+    <div class="home-content-details">
 
-  <div class="left-side-container">
+    <p class="home-text" *ngFor="let d of data">{{d.key}} {{d.value}}</p>
 
-    <h1>Hello, I am</h1>
-    <h1 typingAnimation [typeSpeed]="200" [startDelay]="200" [condition]=true class="typing">
-      Capucine</h1>
-    <p class="left-side-text" *ngFor="let d of data">{{d.key}} {{d.value}}</p>
-
-    <button class="left-side-contact">Contact me</button>
+    <p class="home-text">Rencontrons-nous et discutons de votre projet !</p>
+    </div>
+    <button class="home-contact">Contact me</button>
   </div>
+</div>

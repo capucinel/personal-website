@@ -1,3 +1,6 @@
+@import "../../assets/styles/variables";
+
+
 //variables
 $basic-dark-color: #212121;
 $basic-light-color: #fff;
@@ -5,10 +8,9 @@ $border-radius: 50%;
 $font-size: 20px;
 
 .menu {
-  // position: fixed;
 
   &-container {
-    margin-top: 50px;
+    margin-top: $global-margin;
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -1,24 +1,42 @@
-.left-side {
+@import "../../assets/styles/variables";
+
+p {
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.home {
 
   &-container {
     background: url(/assets/photo/home.jpg) no-repeat;
     background-size: cover;
     height: 100%;
-    // position: fixed;
-    // top: 0;
-    // right: 0;
-    text-align: center;
+    padding: 1%;
     width: 100%;
+  }
 
-
+  &-content {
+    margin-top: $global-margin;
+    width: 55%;
+    border: 0.5px solid $primary-light-color;
+    border-radius: 30px;
+    margin: 0 auto;
+    padding: 2% 0 5% 5%;
+    box-sizing: border-box;
   }
 
   &-text {
     padding: 2%;
+    font-size: $font-size-normal;
+    color: $primary-light-color;
+
   }
 }
 
 .typing {
-  color: white;
-  font-size: 45px;
+  color: $primary-light-color;
+  font-size: $font-size-h1;
+  font-weight: unset;
+
 }
