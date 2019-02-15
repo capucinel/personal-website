@@ -17,17 +17,31 @@ p {
   }
 
   &-content {
-    margin-top: $global-margin;
-    width: 55%;
-    border: 0.5px solid $primary-light-color;
-    border-radius: 30px;
-    margin: 0 auto;
-    padding: 2% 0 5% 5%;
-    box-sizing: border-box;
+    margin: 1% 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    &-contact {
+      padding: 8px;
+      text-decoration: none;
+      border: 1px solid $primary-light-color;
+      border-radius: 10px;
+      color: $primary-light-color;
+    }
+
+    &-details, &-contact {
+      width: 70%;
+      border: 0.5px solid $primary-light-color;
+      border-radius: 30px;
+      margin: 0 auto;
+      padding: 2% 0 1% 5%;
+      box-sizing: border-box;
+      height: fit-content;
+    }
   }
 
   &-text {
-    padding: 2%;
     font-size: $font-size-normal;
     color: $primary-light-color;
 
@@ -38,5 +52,6 @@ p {
   color: $primary-light-color;
   font-size: $font-size-h1;
   font-weight: unset;
+  display: inline;
 
 }

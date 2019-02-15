@@ -1,22 +1,36 @@
 import { HomeData, HomeDataMenu } from './home.model';
 
 export const homeInfos: HomeData[] = [
+
+  {
+    key: 'Langages / frameworks :',
+    value: 'HTML5 - CSS3 - SASS - Angular - ReactJS',
+    delay: '4000'
+  },
 {
   key: 'Disponibilité :',
-  value: 'Immédiate'
+  value: 'Immédiate',
+  delay: '6000'
+
 },
 
 {
   key: 'Age :',
-  value: '34 ans'
+  value: '34 ans',
+  delay: '7000'
+
 },
 {
   key: 'Villes :',
-  value: 'Nantes & Paris'
+  value: 'Nantes & Paris',
+  delay: '8000'
+
 },
 {
   key: 'Email :',
-  value: 'capucine.leclerc@gmail.com'
+  value: 'capucine.leclerc@gmail.com',
+  delay: '9000'
+
 }
 ];
 

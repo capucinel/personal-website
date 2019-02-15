@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { homeInfos } from '../../assets/data/home.data';
 
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
