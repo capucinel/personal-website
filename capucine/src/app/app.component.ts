@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { MenuService } from './providers/menu.service';
+import { MediaChange, ObservableMedia } from '@angular/flex-layout';
+import { Subscription } from 'rxjs';
 
 import {
   transition,
@@ -39,11 +41,35 @@ import {
   ]
 })
 export class AppComponent implements OnInit {
-  title = 'Capucine';
+  iconMenu: string;
+  isMobile: boolean;
+  visible = false;
+  stateOpen = true;
 
-  constructor() { }
+  // to determine if in desktop or mobile view
+  watcher: Subscription;
+  activeMediaQuery: string;
+  constructor(
+    private menuService: MenuService,
+    private media: ObservableMedia
+    ) {
+      this.watcher = this.media.subscribe((change: MediaChange) => {
+        this.activeMediaQuery = change ? change.mqAlias : '';
+        this.isMobile = this.activeMediaQuery === 'xs' || this.activeMediaQuery === 'sm';
+      });
 
+      menuService.change.subscribe(isOpen => {
+        this.visible = isOpen;
+      });
+
+    }
 
   ngOnInit() {
+    this.iconMenu = 'menu';
+  }
+
+  toggle() {
+    this.menuService.toggle();
+    this.iconMenu = this.menuService.isOpen ? 'close' : 'menu';
   }
 }
