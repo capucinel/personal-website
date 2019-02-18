@@ -1,31 +1,43 @@
 import { HomeData, HomeDataMenu } from './home.model';
 
 export const homeInfos: HomeData[] = [
+
   {
-  key: 'Poste :',
-  value: ''
+    key: 'Langages / frameworks :',
+    value: 'HTML5 - CSS3 - SASS - Angular - ReactJS',
+    delay: '4000'
+  },
+{
+  key: 'Disponibilité :',
+  value: 'Immédiate',
+  delay: '6000'
+
 },
+
 {
   key: 'Age :',
-  value: ''
+  value: '34 ans',
+  delay: '7000'
+
+},
+{
+  key: 'Villes :',
+  value: 'Nantes & Paris',
+  delay: '8000'
+
 },
 {
   key: 'Email :',
-  value: ''
-},
-{
-  key: 'Téléphone :',
-  value: ''
-},
-{
-  key: 'Citation préférée :',
-  value: ''
-}];
+  value: 'capucine.leclerc@gmail.com',
+  delay: '9000'
+
+}
+];
 
 export const menuInfos: HomeDataMenu[] = [
 {
   value: 'home',
-  link: '/'
+  link: '/',
 },
 {
   value: 'about me',
@@ -33,12 +45,12 @@ export const menuInfos: HomeDataMenu[] = [
 },
 {
   value: 'my resume',
-  link: 'about'
+  link: 'resume'
 
 },
 {
   value: 'services',
-  link: 'about'
+  link: 'services'
 
 },
 {

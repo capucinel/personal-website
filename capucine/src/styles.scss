@@ -1,14 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css?family=Special+Elite');
 @import url('https://fonts.googleapis.com/css?family=Old+Standard+TT');
-
+// @import url('https://fonts.googleapis.com/css?family=Kosugi+Maru|Nanum+Gothic+Coding|Sanchez');
+// @import url('https://fonts.googleapis.com/css?family=Averia+Gruesa+Libre|Averia+Libre|Kosugi+Maru|Nanum+Gothic+Coding|Sanchez');
+@import url('https://fonts.googleapis.com/css?family=Arvo|Comfortaa|Domine|Fira+Sans|Space+Mono|Roboto|Josefin+Slab|Merriweather|Nunito');
 @import "/assets/styles/variables";
 @import '/../node_modules/@angular/material/theming';
 
+html {
+  height: 100%;
+}
+
 body {
   font-family: $font-text;
-  overflow:hidden;
+  overflow: hidden;
+  box-sizing: border-box;
+  height: 100%;
   margin: 0;
+  padding: 0;
 }
 
 h1 {

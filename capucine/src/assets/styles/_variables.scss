@@ -1,6 +1,32 @@
 @import '../../../node_modules/@angular/material/theming';
 
-$font-text-h1: 'Special Elite', cursive;
-$font-text: 'Old Standard TT', serif;
+// text
+$font-text-h1: 'Space Mono', cursive;
+// $font-text: 'Arvo', serif;
+// $font-text:'Comfortaa', cursive;
+// $font-text:'Domine', serif;
+// $font-text:'Merriweather', serif;
+// $font-text:'Nunito', sans-serif;
+// $font-text:'Fira Sans', sans-serif;
+$font-text:'Space Mono', sans-serif;
+
 
 $font-size-h1: 20px;
+$font-size-normal: 15px;
+$font-size-small: 12px;
+$font-size-extra-small: 10px;
+
+// global
+$global-margin: 25px;
+$primary-light-color: #ffffff;
+$primary-dark-color: #000000;
+
+// Font-weight
+$font-weight-extra-light: 200;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+$font-weight-extra-bold: 800;
+$font-weight-black: 900;

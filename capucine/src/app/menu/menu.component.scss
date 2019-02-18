@@ -1,3 +1,6 @@
+@import "../../assets/styles/variables";
+
+
 //variables
 $basic-dark-color: #212121;
 $basic-light-color: #fff;
@@ -5,10 +8,9 @@ $border-radius: 50%;
 $font-size: 20px;
 
 .menu {
-  position: fixed;
 
   &-container {
-    margin-top: 50px;
+    margin-top: $global-margin;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,6 +39,7 @@ $font-size: 20px;
   &-main {
     padding-left: 0;
     text-align: center;
+
     &-link {
       padding-bottom: 15px;
       list-style: none;
@@ -50,7 +53,8 @@ $font-size: 20px;
 }
 
 .networks {
-display: flex;
+  display: flex;
+
   &:nth-child(2) {
     //margin-top: 20px;
   }
@@ -84,11 +88,11 @@ display: flex;
 
       &:hover {
         transition: all 0.2s linear 0s;
-        border-color: rgba($basic-dark-color,0);
+        border-color: rgba($basic-dark-color, 0);
 
         i {
           transform: scale(1.15);
-          text-shadow: 4px 0px 3px rgba($basic-dark-color,0.3);
+          text-shadow: 4px 0px 3px rgba($basic-dark-color, 0.3);
           transition: all 0.2s linear 0.2s;
           display: inline-block;
           vertical-align: middle;

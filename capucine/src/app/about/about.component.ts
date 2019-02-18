@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-about',
@@ -9,7 +12,10 @@ export class AboutComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+
+    ngOnInit() {
+
+
   }
 
 }

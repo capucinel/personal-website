@@ -1,24 +1,40 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { MenuComponent } from './menu/menu.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { TypingAnimationDirective } from 'angular-typing-animation';
 import { RouterModule, Routes } from '@angular/router';
+import {MenuComponent} from './menu/menu.component';
+import {ContactComponent} from './contact/contact.component';
+import {ResumeComponent} from './resume/resume.component';
 import {AboutComponent} from './about/about.component';
+import { ServicesComponent } from './services/services.component';
 
 const appRoutes: Routes = [
-  {
-    path: 'about',
-    component: AboutComponent
-  },
+
   { path: '',
-    redirectTo: '/',
-    pathMatch: 'full'
+    component: HomeComponent,
   },
-  // { path: '**', component: PageNotFoundComponent }
+  { path: 'about',
+    component: AboutComponent,
+    data: {
+      title: 'about'
+    }
+  },
+  { path: 'resume',
+  component: ResumeComponent,
+    data: {
+      title: 'resume'
+    }
+  },
+  { path: 'services',
+  component: ServicesComponent,
+    data: {
+      title: 'services'
+    }
+  }
 ];
 
 @NgModule({
@@ -26,16 +42,20 @@ const appRoutes: Routes = [
     AppComponent,
     HomeComponent,
     MenuComponent,
+    ContactComponent,
+    ResumeComponent,
     AboutComponent,
-    TypingAnimationDirective
+    ServicesComponent,
+    TypingAnimationDirective,
   ],
   imports: [
     BrowserModule,
     FlexLayoutModule,
     RouterModule.forRoot(
         appRoutes,
-        { enableTracing: true } // <-- debugging purposes only
-      )
+        { enableTracing: false } // <-- debugging purposes only
+      ),
+      BrowserAnimationsModule
   ],
   exports: [RouterModule],
   providers: [],
