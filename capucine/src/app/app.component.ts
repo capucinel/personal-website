@@ -45,6 +45,8 @@ export class AppComponent implements OnInit {
   isMobile: boolean;
   visible = false;
   stateOpen = true;
+  isDesktop: boolean;
+
 
   // to determine if in desktop or mobile view
   watcher: Subscription;
@@ -52,29 +54,23 @@ export class AppComponent implements OnInit {
   constructor(
     private menuService: MenuService,
     private media: ObservableMedia
-    ) {
-      this.watcher = this.media.subscribe((change: MediaChange) => {
-        this.activeMediaQuery = change ? change.mqAlias : '';
-        this.isMobile = this.activeMediaQuery === 'xs' || this.activeMediaQuery === 'sm';
-      });
-
-      menuService.change.subscribe(isOpen => {
+  ) {
+    this.watcher = this.media.subscribe((change: MediaChange) => {
+      this.activeMediaQuery = change ? change.mqAlias : '';
+      this.isMobile = this.activeMediaQuery === 'xs' || this.activeMediaQuery === 'sm';
+      this.isMobile ? menuService.change.subscribe(isOpen => {
         this.visible = isOpen;
-    this.iconMenu = this.menuService.isOpen ? 'close' : 'menu';
-
-      });
-
-    }
+        this.iconMenu = this.menuService.isOpen ? 'close' : 'menu';
+      }) : this.menuService.close();
+    });
+  }
 
   ngOnInit() {
     this.iconMenu = 'menu';
   }
 
+
   toggle() {
     this.menuService.toggle();
   }
-
-  // changeOpen(ev: boolean) {
-  //   this.stateOpen = ev;
-  // }
 }

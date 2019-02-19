@@ -36,9 +36,9 @@ export class MenuComponent implements OnInit {
       this.visible = isOpen;
     });
    }
+
   menu = menuInfos;
   iconMenu: string;
-
 
   menuState = 'out';
 
@@ -52,7 +52,5 @@ export class MenuComponent implements OnInit {
   hideNavMobile() {
     this.menuService.toggle();
     this.iconMenu = this.menuService.isOpen ? 'close' : 'menu';
-
   }
-
 }
