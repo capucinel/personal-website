@@ -1,10 +1,10 @@
 <div class="app">
-
-  <app-menu class="app-menu" fxHide.lt-md></app-menu>
-  <div class="app-menu-burger" fxHide fxShow.lt-md [ngClass]="{ active: iconMenu === 'close' }" (click)="toggle()">
+  <div class="app-menu-burger" fxHide fxShow.lt-md [ngStyle]="{'color': iconMenu === 'close' ? 'black' : 'violet'}" (click)="toggle()">
     <mat-icon class="line"> {{ iconMenu }}</mat-icon>
   </div>
-  <app-menu *ngIf="isMobile && visible" [visible]="visible" fxHide.gt-sm></app-menu>
+  <app-menu class="app-menu" fxHide.lt-md></app-menu>
+
+  <app-menu *ngIf="isMobile && visible" class="app-menu-mobile"></app-menu>
 
 
   <div [@myAnimation]="o.isActivated ? o.activatedRoute : ''" class="app-container" ngClass.lt-md="mobile">

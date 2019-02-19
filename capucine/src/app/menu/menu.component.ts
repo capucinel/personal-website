@@ -31,8 +31,13 @@ export class MenuComponent implements OnInit {
   @Output() opened = new EventEmitter();
   @Input() visible = true;
 
-  constructor(private menuService: MenuService) { }
+  constructor(private menuService: MenuService) {
+    menuService.change.subscribe(isOpen => {
+      this.visible = isOpen;
+    });
+   }
   menu = menuInfos;
+  iconMenu: string;
 
 
   menuState = 'out';
@@ -46,6 +51,8 @@ export class MenuComponent implements OnInit {
 
   hideNavMobile() {
     this.menuService.toggle();
+    this.iconMenu = this.menuService.isOpen ? 'close' : 'menu';
+
   }
 
 }

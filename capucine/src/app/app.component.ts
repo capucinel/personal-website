@@ -60,6 +60,8 @@ export class AppComponent implements OnInit {
 
       menuService.change.subscribe(isOpen => {
         this.visible = isOpen;
+    this.iconMenu = this.menuService.isOpen ? 'close' : 'menu';
+
       });
 
     }
@@ -70,6 +72,9 @@ export class AppComponent implements OnInit {
 
   toggle() {
     this.menuService.toggle();
-    this.iconMenu = this.menuService.isOpen ? 'close' : 'menu';
   }
+
+  // changeOpen(ev: boolean) {
+  //   this.stateOpen = ev;
+  // }
 }
