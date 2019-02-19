@@ -45,7 +45,6 @@ export class AppComponent implements OnInit {
   isMobile: boolean;
   visible = false;
   stateOpen = true;
-  isDesktop: boolean;
 
 
   // to determine if in desktop or mobile view
