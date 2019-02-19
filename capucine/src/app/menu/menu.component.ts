@@ -1,32 +1,58 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { animate, state, style, transition, trigger } from '@angular/animations';
+import { MenuService } from '../providers/menu.service';
 import { menuInfos } from '../../assets/data/home.data';
-import { Router, ActivatedRoute } from '@angular/router';
-
 
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.scss']
+  styleUrls: ['./menu.component.scss'],
+  animations: [
+    trigger('slideInOut', [
+      state(
+        'in',
+        style({
+          transform: 'translateX(100%)'
+        })
+      ),
+      state(
+        'out',
+        style({
+          transform: 'translateX(0%)'
+        })
+      ),
+      transition('in => out', animate('200ms ease-in-out')),
+      transition('out => in', animate('200ms ease-in-out'))
+    ])
+  ]
 })
+
 export class MenuComponent implements OnInit {
+  @Output() opened = new EventEmitter();
+  @Input() visible = true;
+
+  constructor(private menuService: MenuService) {
+    menuService.change.subscribe(isOpen => {
+      this.visible = isOpen;
+    });
+   }
   menu = menuInfos;
-  isHome = true;
+  iconMenu: string;
 
-  notHome(elemMenu) {
-    if (elemMenu !== 'home') {
-      this.isHome = false;
-    }
-    // return console.log('element traité par la fonction : ' + this.isHome);
+
+  menuState = 'out';
+
+    ngOnInit() {
+    // change sidemenu state
+    this.menuService.change.subscribe(stateMenu => {
+      this.menuState = stateMenu && this.menuState === 'out' ? 'in' : 'out';
+    });
   }
-  constructor(
-    private router: Router,
-    private activatedRoute: ActivatedRoute,
 
-  ) { }
-
-
-  ngOnInit() {
-    console.log(this.router.url);
+  hideNavMobile() {
+    this.menuService.toggle();
+    this.iconMenu = this.menuService.isOpen ? 'close' : 'menu';
 
   }
+
 }

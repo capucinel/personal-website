@@ -5,7 +5,7 @@
 // @import url('https://fonts.googleapis.com/css?family=Averia+Gruesa+Libre|Averia+Libre|Kosugi+Maru|Nanum+Gothic+Coding|Sanchez');
 @import url('https://fonts.googleapis.com/css?family=Arvo|Comfortaa|Domine|Fira+Sans|Space+Mono|Roboto|Josefin+Slab|Merriweather|Nunito');
 @import "/assets/styles/variables";
-@import '/../node_modules/@angular/material/theming';
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
 
 html {
   height: 100%;
@@ -24,3 +24,6 @@ h1 {
   font-family: $font-text-h1;
   font-size: $font-size-h1;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Roboto', sans-serif; }

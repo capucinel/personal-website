@@ -1,4 +1,4 @@
-<div class="menu-container">
+<nav class="menu-container">
   <div class="menu-header">
     <div class="menu-header-img"></div>
     <div class="menu-header-title">Capucine Leclerc</div>
@@ -11,6 +11,6 @@
   </div>
 
   <ul class="menu-main">
-    <li class="menu-main-link" *ngFor="let elem of menu"><a [routerLink]="[elem.link]">{{elem.value | uppercase}}</a></li>
+    <li class="menu-main-link" *ngFor="let elem of menu"><a [routerLink]="[elem.link]" (click)=hideNavMobile()>{{elem.value}}</a></li>
   </ul>
-</div>
+</nav>

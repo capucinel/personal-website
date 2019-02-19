@@ -11,6 +11,7 @@ import {ContactComponent} from './contact/contact.component';
 import {ResumeComponent} from './resume/resume.component';
 import {AboutComponent} from './about/about.component';
 import { ServicesComponent } from './services/services.component';
+import { MatIconModule } from '@angular/material';
 
 const appRoutes: Routes = [
 
@@ -46,11 +47,12 @@ const appRoutes: Routes = [
     ResumeComponent,
     AboutComponent,
     ServicesComponent,
-    TypingAnimationDirective,
+    TypingAnimationDirective
   ],
   imports: [
     BrowserModule,
     FlexLayoutModule,
+    MatIconModule,
     RouterModule.forRoot(
         appRoutes,
         { enableTracing: false } // <-- debugging purposes only
