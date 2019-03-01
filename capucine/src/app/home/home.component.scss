@@ -11,9 +11,11 @@ p {
   &-container {
     background: url(/assets/photo/home.jpg) no-repeat;
     background-size: cover;
+    background-attachment: fixed;
+
     height: 100%;
     padding: 1%;
-    width: 100%;
+    width: 98%;
   }
 
   &-content {
@@ -21,6 +23,7 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-items: center;
 
     &-contact {
       padding: 8px;
@@ -30,21 +33,25 @@ p {
       color: $primary-light-color;
     }
 
-    &-details, &-contact {
+    &-details,
+    &-contact {
       width: 70%;
       border: 0.5px solid $primary-light-color;
       border-radius: 30px;
-      margin: 0 auto;
       padding: 2% 0 1% 5%;
       box-sizing: border-box;
       height: fit-content;
+      margin: 2% 0;
+
+      &.mobile {
+        width: 85%;
+      }
     }
   }
 
   &-text {
     font-size: $font-size-normal;
     color: $primary-light-color;
-
   }
 }
 
@@ -53,5 +60,4 @@ p {
   font-size: $font-size-h1;
   font-weight: unset;
   display: inline;
-
 }
